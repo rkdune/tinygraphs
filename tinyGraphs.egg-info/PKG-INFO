@@ -1,6 +1,6 @@
 Metadata-Version: 2.2
 Name: tinygraphs
-Version: 0.0.7
+Version: 1.0
 Summary: A minimal library for plotting training progress in Jupyter/Colab
 Author-email: rkal <rohkal505@gmail.com>
 License: MIT License
@@ -44,13 +44,13 @@ pip install tinyGraphs
 ## Options
 
 `train_losses`: 
-List of training loss values to plot
+(Required) List of training loss values to plot
 
 `val_losses`: 
-List of validation loss values to plot
+(Required) List of validation loss values to plot
 
 `epoch`: 
-Current epoch number for updating the plot
+(Required) Current epoch number for updating the plot
 
 `legend_loc`: 
 Location of the legend on the plot (default: "upper right")
@@ -112,9 +112,9 @@ for epoch in range(epochs):
 ```python
     plot(train_losses, val_losses, epoch, legend_loc = "upper right", updating_title = False, legend = True, x_label = "Epoch", y_label = "Loss", title = "Loss Graph", dark_mode = True)
 ```
-![Dark Mode is Awesome!](tinyGraphs/images/Dark_Mode_Loss_Graph.png)
+![Dark Mode is Awesome!](https://raw.githubusercontent.com/rkdune/tinyGraphs/main/tinyGraphs/images/Dark_Mode_Loss_Graph.png)
 
 ```python
     plot(train_losses, val_losses, epoch, color_scheme = 'jet')
 ```
-![Beautiful Loss Graph With Barely Any Code!](tinyGraphs/images/Minimal_Loss_Graph.png)
+![Beautiful Loss Graph With Barely Any Code!](https://github.com/rkdune/tinyGraphs/raw/main/tinyGraphs/images/Minimal_Loss_Graph.png)

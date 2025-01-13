@@ -77,9 +77,9 @@ for epoch in range(epochs):
 ```python
     plot(train_losses, val_losses, epoch, legend_loc = "upper right", updating_title = False, legend = True, x_label = "Epoch", y_label = "Loss", title = "Loss Graph", dark_mode = True)
 ```
-![Dark Mode is Awesome!](tinygraphs/images/Dark_Mode_Loss_Graph.png)
+![Dark Mode is Awesome!](tinyGraphs/images/Dark_Mode_Loss_Graph.png)
 
 ```python
     plot(train_losses, val_losses, epoch, color_scheme = 'jet')
 ```
-![Beautiful Loss Graph With Barely Any Code!](tinygraphs/images/Minimal_Loss_Graph.png)
+![Beautiful Loss Graph With Barely Any Code!](tinyGraphs/images/Minimal_Loss_Graph.png)

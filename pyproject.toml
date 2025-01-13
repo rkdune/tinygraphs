@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tinyGraphs"
-version = "0.0.1"
+name = "tinygraphs"
+version = "0.0.6"
 description = "A minimal library for plotting training progress in Jupyter/Colab"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -20,4 +20,9 @@ classifiers = [
 dependencies = [
     "matplotlib",
     "IPython",
+]
+
+[tool.hatch.build]
+include = [
+    "*.png"
 ]

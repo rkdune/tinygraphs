@@ -1,6 +1,5 @@
-# tinyGraphs
-
-A minimal library for plotting training progress in Jupyter/COLAB notebooks.
+![](tinyGraphs/images/tinygraphs_header.png)
+*A minimal library for plotting training progress in Jupyter/COLAB notebooks.*
 
 ## Installation
 

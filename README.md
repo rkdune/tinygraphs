@@ -1,4 +1,4 @@
-![](https://github.com/rkdune/tinygraphs/raw/main/tinyGraphs/images/tinygraphs_header.png)
+![](https://github.com/rkdune/tinygraphs/raw/main/tinygraphs/images/tinygraphs_header.png)
 *A minimal library for plotting training progress in Jupyter/COLAB notebooks.*
 
 ## Installation
@@ -41,7 +41,7 @@ Boolean flag to switch between light and dark themes (default: True)
 
 ```python
 
-import tinyGraphs as tg
+import tinygraphs as tg
 
 train_losses, val_losses = [], []
 epochs = 3
@@ -69,7 +69,7 @@ for epoch in range(epochs):
             running_val_loss += loss.item()
     val_losses.append(running_val_loss / len(val_loader))
 
-    # Plot using tinyGraphs
+    # Plot using tinygraphs
     tg.plot(train_losses, val_losses, epoch, legend_loc = "upper right", updating_title = False, legend = True, x_label = "x title", y_label = "y title", title = "title", dark_mode = False)
 
 ```
@@ -78,9 +78,9 @@ for epoch in range(epochs):
 ```python
     tg.plot(train_losses, val_losses, epoch, legend_loc = "upper right", updating_title = False, legend = True, x_label = "Epoch", y_label = "Loss", title = "Loss Graph", dark_mode = True)
 ```
-![Dark Mode is Awesome!](https://raw.githubusercontent.com/rkdune/tinyGraphs/main/tinyGraphs/images/Dark_Mode_Loss_Graph.png)
+![Dark Mode is Awesome!](https://raw.githubusercontent.com/rkdune/tinygraphs/main/tinygraphs/images/Dark_Mode_Loss_Graph.png)
 
 ```python
-    tg.plot(train_losses, val_losses, epoch, color_scheme = 'jet')
+    tg.plot(train_losses, val_losses, epoch, theme = 'jet')
 ```
-![Beautiful Loss Graph With Barely Any Code!](https://github.com/rkdune/tinyGraphs/raw/main/tinyGraphs/images/Minimal_Loss_Graph.png)
+![Beautiful Loss Graph With Barely Any Code!](https://github.com/rkdune/tinygraphs/raw/main/tinygraphs/images/Minimal_Loss_Graph.png)

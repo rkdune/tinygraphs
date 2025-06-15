@@ -1,12 +1,12 @@
-# tinyGraphs.py
+# tinygraphs.py
 import matplotlib.pyplot as plt
 from IPython.display import clear_output
 
-def plot(train_losses, val_losses, epoch, color_scheme='default', y_label = "Loss", x_label = "Epoch", title = "Epoch", updating_title = True, y_max = 0, legend = True, legend_loc = "upper right", dpi = 100, dark_mode = False):
+def plot(train_losses, val_losses, epoch, theme='default', y_label = "Loss", x_label = "Epoch", title = "Epoch", updating_title = True, y_max = 0, legend = True, legend_loc = "upper right", dpi = 100, dark_mode = False):
     clear_output(wait=True)
     plt.figure(figsize=(5, 3))
 
-    cmap = color_handling(color_scheme)
+    cmap = color_handling(theme)
     if dark_mode == True:
       plt.style.use('dark_background')
 
@@ -45,7 +45,7 @@ def legend_handling(legend_loc):
         print(f"Warning: '{legend_loc}' not found. Supported arguments are: 'best', 'upper right', 'upper left', 'lower left', 'lower right', 'right', 'center left', 'center right', 'lower center', 'upper center', 'center'. Defaulting to 'upper right' instead.")
         return 'upper right'
 
-def color_handling(color_scheme):
+def color_handling(theme):
     colormaps = {
         'viridis': 'viridis',     # Default - perceptually uniform, colorblind friendly
         'magma': 'magma',         # Good for black backgrounds
@@ -58,13 +58,13 @@ def color_handling(color_scheme):
         'YlOrRd': 'YlOrRd',      # Yellow-Orange-Red - good for sequential data
         'tab10': 'tab10'          # Qualitative - good for categorical data
     }
-    if color_scheme == 'default':
+    if theme == 'default':
         return plt.colormaps.get_cmap('tab10')
 
-    elif color_scheme in colormaps:
-        return plt.colormaps.get_cmap(colormaps[color_scheme])
+    elif theme in colormaps:
+        return plt.colormaps.get_cmap(colormaps[theme])
 
     else:
         # Default to viridis if an invalid scheme is provided
-        print(f"Warning: '{color_scheme}' not found. Using 'tab10' instead.")
+        print(f"Warning: '{theme}' not found. Using 'tab10' instead.")
         return plt.colormaps.get_cmap('tab10')

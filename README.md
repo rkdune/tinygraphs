@@ -78,9 +78,9 @@ for epoch in range(epochs):
 ```python
     tg.plot(train_losses, val_losses, epoch, legend_loc = "upper right", updating_title = False, legend = True, x_label = "Epoch", y_label = "Loss", title = "Loss Graph", dark_mode = True)
 ```
-![Dark Mode is Awesome!](https://raw.githubusercontent.com/rkdune/tinygraphs/main/tinygraphs/images/Dark_Mode_Loss_Graph.png)
+![Dark Mode is Awesome!](https://raw.githubusercontent.com/rkdune/tinygraphs/refs/heads/main/tinyGraphs/images/Dark_Mode_Loss_Graph.png)
 
 ```python
     tg.plot(train_losses, val_losses, epoch, theme = 'jet')
 ```
-![Beautiful Loss Graph With Barely Any Code!](https://github.com/rkdune/tinygraphs/raw/main/tinygraphs/images/Minimal_Loss_Graph.png)
+![Beautiful Loss Graph With Barely Any Code!](https://raw.githubusercontent.com/rkdune/tinygraphs/refs/heads/main/tinyGraphs/images/Minimal_Loss_Graph.png)

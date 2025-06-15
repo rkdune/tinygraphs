@@ -4,13 +4,15 @@ from IPython.display import clear_output
 
 def plot(train_losses, val_losses, epoch, theme='default', y_label = "Loss", x_label = "Epoch", title = "Epoch", updating_title = True, y_max = 0, legend = True, legend_loc = "upper right", dpi = 100, dark_mode = False):
     clear_output(wait=True)
+    
     plt.figure(figsize=(5, 3))
 
-    cmap = color_handling(theme)
     if dark_mode == True:
-      plt.style.use('dark_background')
+        plt.style.use('dark_background')
+    else:
+        plt.style.use('default')
 
-
+    cmap = color_handling(theme)
 
     plt.plot(train_losses, label='Train Loss', marker='o', color=cmap(0))
     plt.plot(val_losses,   label='Validation Loss', marker='x', color=cmap(1))

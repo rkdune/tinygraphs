@@ -1,1 +1,1 @@
-from .plot import plot_training_progress
+from .plot import plot

@@ -1,6 +1,6 @@
 Metadata-Version: 2.2
 Name: tinygraphs
-Version: 1.0
+Version: 1.2.2
 Summary: A minimal library for plotting training progress in Jupyter/Colab
 Author-email: rkal <rohkal505@gmail.com>
 License: MIT License
@@ -33,13 +33,12 @@ License-File: LICENSE
 Requires-Dist: matplotlib
 Requires-Dist: IPython
 
-# tinyGraphs
-
-A minimal library for plotting training progress in Jupyter/COLAB notebooks.
+![](https://github.com/rkdune/tinygraphs/raw/main/tinyGraphs/images/tinygraphs_header.png)
+*A minimal library for plotting training progress in Jupyter/COLAB notebooks.*
 
 ## Installation
 
-pip install tinyGraphs
+pip install tinygraphs
 
 ## Options
 
@@ -77,6 +76,8 @@ Boolean flag to switch between light and dark themes (default: True)
 
 ```python
 
+import tinyGraphs as tg
+
 train_losses, val_losses = [], []
 epochs = 3
 
@@ -104,17 +105,17 @@ for epoch in range(epochs):
     val_losses.append(running_val_loss / len(val_loader))
 
     # Plot using tinyGraphs
-    plot(train_losses, val_losses, epoch, legend_loc = "upper right", updating_title = False, legend = True, x_label = "x title", y_label = "y title", title = "title", dark_mode = False)
+    tg.plot(train_losses, val_losses, epoch, legend_loc = "upper right", updating_title = False, legend = True, x_label = "x title", y_label = "y title", title = "title", dark_mode = False)
 
 ```
 ## Other Usage Options
 
 ```python
-    plot(train_losses, val_losses, epoch, legend_loc = "upper right", updating_title = False, legend = True, x_label = "Epoch", y_label = "Loss", title = "Loss Graph", dark_mode = True)
+    tg.plot(train_losses, val_losses, epoch, legend_loc = "upper right", updating_title = False, legend = True, x_label = "Epoch", y_label = "Loss", title = "Loss Graph", dark_mode = True)
 ```
 ![Dark Mode is Awesome!](https://raw.githubusercontent.com/rkdune/tinyGraphs/main/tinyGraphs/images/Dark_Mode_Loss_Graph.png)
 
 ```python
-    plot(train_losses, val_losses, epoch, color_scheme = 'jet')
+    tg.plot(train_losses, val_losses, epoch, color_scheme = 'jet')
 ```
 ![Beautiful Loss Graph With Barely Any Code!](https://github.com/rkdune/tinyGraphs/raw/main/tinyGraphs/images/Minimal_Loss_Graph.png)

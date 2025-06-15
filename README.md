@@ -1,4 +1,4 @@
-![](https://github.com/rkdune/tinygraphs/raw/main/tinygraphs/images/tinygraphs_header.png)
+![](https://raw.githubusercontent.com/rkdune/tinygraphs/refs/heads/main/tinyGraphs/images/tinygraphs_header.png)
 *A minimal library for plotting training progress in Jupyter/COLAB notebooks.*
 
 ## Installation

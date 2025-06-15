@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/rkdune/tinygraphs/refs/heads/main/tinyGraphs/images/tinygraphsheader.png)
+![](https://raw.githubusercontent.com/rkdune/tinygraphs/refs/heads/main/tinyGraphs/images/tinygraphs_header.png)
 
 ## Installation
 

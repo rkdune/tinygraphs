@@ -1,9 +1,8 @@
-![](https://raw.githubusercontent.com/rkdune/tinygraphs/refs/heads/main/tinyGraphs/images/tinygraphs_header.png)
-*A minimal library for plotting training progress in Jupyter/COLAB notebooks.*
+![](https://raw.githubusercontent.com/rkdune/tinygraphs/refs/heads/main/tinyGraphs/images/tinygraphsheader.png)
 
 ## Installation
 
-pip install tinygraphs
+`pip install tinygraphs` or `%pip install tinygraphs` 
 
 ## Options
 
@@ -37,7 +36,7 @@ Main title of the plot
 `dark_mode`: 
 Boolean flag to switch between light and dark themes (default: True)
 
-## Usage
+## Usage With Model
 
 ```python
 
@@ -73,6 +72,29 @@ for epoch in range(epochs):
     tg.plot(train_losses, val_losses, epoch, legend_loc = "upper right", updating_title = False, legend = True, x_label = "x title", y_label = "y title", title = "title", dark_mode = False)
 
 ```
+
+## Usage Without Model
+
+```python
+
+import tinygraphs as tg
+
+train_losses, val_losses = [], []
+epochs = 3
+
+for epoch in range(epochs):
+    # Simulate training loss decreasing linearly
+    train_loss = 1 - (epoch * 0.1)
+    train_losses.append(train_loss)
+    
+    # Simulate validation loss
+    val_loss = train_loss + 0.05
+    val_losses.append(val_loss)
+    
+    # Plot using tinygraphs
+    tg.plot(train_losses, val_losses, epoch, theme = 'jet', dark_mode = False)
+```
+
 ## Other Usage Options
 
 ```python
